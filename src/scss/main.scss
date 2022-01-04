@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+body {
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: f;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.stage {
+  width: 1020px;
+  height: 510px;
+  background-image: url("/img/tile.png");
+  position: relative;
+}
+
+.entity {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  &--pac {
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 65px;
+    user-select: none;
+  }
+  &--pac--closed {
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 65px;
+    user-select: none;
+    background-position-x: 85px;
+  }
+  &--pac--down {
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 65px;
+    user-select: none;
+    background-position-y: -160px;
+  }
+  &--pac--up {
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 65px;
+    user-select: none;
+    background-position-y: -230px;
+  }
+  &--pac--left {
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 65px;
+    user-select: none;
+    background-position-y: -80px;
+  }
+  &--pac--right {
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 65px;
+    user-select: none;
+    background-position-y: 0px;
+  }
+  &--wall {
+    background-image: url("/img/wall.png");
+  }
+  &--apple {
+    background-image: url("/img/apple.png");
+  }
+  &--bomb {
+    background-image: url("/img/bomb.png");
+  }
+  &--tomb {
+    margin-bottom: 5px;
+
+    background-image: url("/img/tomb.png");
+  }
+}
+.pacboy {
+  z-index: 1;
+  &-active-light {
+    z-index: 1;
+    background-image: url("/img/pacboy-active-light.png");
+  }
+  &-active-medium {
+    background-image: url("/img/pacboy-active-medium.png");
+  }
+  &-active-dark {
+    background-image: url("/img/pacboy-active-dark.png");
+  }
+}
+.pacgirl {
+  &-active-light {
+    background-image: url("/img/pacgirl-active-light.png");
+  }
+  &-active-medium {
+    background-image: url("/img/pacgirl-active-medium.png");
+  }
+  &-active-dark {
+    background-image: url("/img/pacgirl-active-dark.png");
+  }
+}
+.empty {
+  position: absolute;
+  margin-top: 1px;
+  width: 82px;
+  height: 82px;
+  background-color: rgb(243, 239, 239);
+}
+.game-over {
+  font-size: 5rem;
+  text-align: center;
+  color: red;
+}
+.new-game-button {
+  border: none;
+  background-color: burlywood;
+  width: 100px;
+  height: 50px;
+  font-size: 1.3rem;
+  color: rebeccapurple;
+  &:hover {
+    background-color: rebeccapurple;
+    color: burlywood;
+  }
+}
